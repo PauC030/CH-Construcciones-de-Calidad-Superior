@@ -17,7 +17,7 @@ import {
 
 import CasaFamiliar from './assets/CasaFamiliar.jpg';
 import RemodelacionIntegral from './assets/baño.jpg'; 
-import Casita from './assets/Casita.jpg'; 
+import Casa from './assets/Casa.jpg'; 
 import cocina from './assets/cocina.jpg';
 import house from './assets/house.jpg'; 
 import Lavamanos from './assets/Diseño.png';
@@ -128,7 +128,7 @@ const ChConstrucciones = () => {
     {
       title: "Casa ladrillo a la vista",
       description: "Construcción con acabados exclusivos",
-      image: Casita
+      image: Casa
     },
     {
       title: "Remodelación de Cocina Moderna",
