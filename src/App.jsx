@@ -21,7 +21,7 @@ import Casa from './assets/Casa.jpg';
 import cocina from './assets/cocina.jpg';
 import house from './assets/house.jpg'; 
 import Lavamanos from './assets/Diseño.png';
-import Logo from './assets/logo.jpg'; // Asegúrate de tener tu logo en esta ruta
+import Logo from './assets/Logo.jpg'; // Asegúrate de tener tu logo en esta ruta
 
 const ChConstrucciones = () => {
   const [formData, setFormData] = useState({
