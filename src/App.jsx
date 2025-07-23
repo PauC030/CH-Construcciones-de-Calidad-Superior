@@ -1,4 +1,3 @@
-import './App.css'
 import React, { useState, useEffect } from 'react';
 import { 
   Home, 
@@ -15,6 +14,14 @@ import {
   Menu,
   X
 } from 'lucide-react';
+
+import CasaFamiliar from './assets/CasaFamiliar.jpg';
+import RemodelacionIntegral from './assets/baño.jpg'; 
+import Casita from './assets/Casita.jpg'; 
+import cocina from './assets/cocina.jpg';
+import house from './assets/house.jpg'; 
+import Lavamanos from './assets/Diseño.png';
+import Logo from './assets/logo.jpg'; // Asegúrate de tener tu logo en esta ruta
 
 const ChConstrucciones = () => {
   const [formData, setFormData] = useState({
@@ -39,7 +46,7 @@ const ChConstrucciones = () => {
     e.preventDefault();
     if (formData.nombre && formData.telefono && formData.mensaje) {
       const whatsappMessage = `¡Hola Eduardo! Soy ${formData.nombre}. ${formData.mensaje}. Mi teléfono: ${formData.telefono} | Email: ${formData.email}`;
-      const whatsappUrl = `https://wa.me/573001234567?text=${encodeURIComponent(whatsappMessage)}`;
+      const whatsappUrl = `https://wa.me/573163526486?text=${encodeURIComponent(whatsappMessage)}`;
       
       alert('¡Gracias por tu mensaje! Te conectaremos con Eduardo Chapeño vía WhatsApp.');
       window.open(whatsappUrl, '_blank');
@@ -71,32 +78,32 @@ const ChConstrucciones = () => {
 
   const services = [
     {
-      icon: <Home className="w-12 h-12" />,
+      icon: <Home className="w-16 h-16" />,
       title: "Construcción de Viviendas",
       description: "Construcción completa de casas desde cimientos hasta acabados finales con materiales de primera calidad"
     },
     {
-      icon: <Hammer className="w-12 h-12" />,
+      icon: <Hammer className="w-16 h-16" />,
       title: "Remodelaciones Integrales",
       description: "Renovamos y modernizamos tu hogar actual con diseños contemporáneos y funcionales"
     },
     {
-      icon: <Building className="w-12 h-12" />,
+      icon: <Building className="w-16 h-16" />,
       title: "Construcciones Comerciales",
       description: "Locales comerciales, oficinas y espacios de trabajo diseñados para el éxito de tu negocio"
     },
     {
-      icon: <HardHat className="w-12 h-12" />,
+      icon: <HardHat className="w-16 h-16" />,
       title: "Dirección de Obra",
       description: "Supervisión profesional de tu proyecto garantizando calidad, tiempos y presupuesto"
     },
     {
-      icon: <Palette className="w-12 h-12" />,
+      icon: <Palette className="w-16 h-16" />,
       title: "Acabados de Lujo",
       description: "Acabados premium y detalles exclusivos que dan el toque final perfecto a tu construcción"
     },
     {
-      icon: <Wrench className="w-12 h-12" />,
+      icon: <Wrench className="w-16 h-16" />,
       title: "Mantenimiento Especializado",
       description: "Servicios de mantenimiento preventivo y correctivo para preservar tu inversión"
     }
@@ -104,43 +111,71 @@ const ChConstrucciones = () => {
 
   const projects = [
     {
-      title: "Casa Familiar Moderna",
-      description: "Construcción completa con acabados premium - 200m²",
-      gradient: "from-gray-800 to-gray-600"
+      title: "Edificio de cuatro pisos",
+      description: "Construcción completa con acabados sutiles y funcionalidades completas",
+      image: CasaFamiliar
     },
     {
       title: "Remodelación Integral",
-      description: "Renovación completa de apartamento - 140m²",
-      gradient: "from-yellow-400 to-orange-500"
+      description: "Renovación completa de baño moderno",
+      image: RemodelacionIntegral
     },
     {
-      title: "Local Comercial",
-      description: "Construcción y diseño interior - 180m²",
-      gradient: "from-gray-700 to-gray-800"
+      title: "Casa familiar de dos pisos",
+      description: "Construcción de vivienda familiar con acabados sutiles y funcionales",
+      image: house
     },
     {
-      title: "Casa Campestre de Lujo",
-      description: "Construcción con acabados exclusivos - 300m²",
-      gradient: "from-orange-500 to-orange-600"
+      title: "Casa ladrillo a la vista",
+      description: "Construcción con acabados exclusivos",
+      image: Casita
     },
     {
-      title: "Ampliación Residencial",
-      description: "Segunda planta y área social - 120m²",
-      gradient: "from-gray-800 to-yellow-400"
+      title: "Remodelación de Cocina Moderna",
+      description: "Remodelación completa con acabados suavees y funcionales",
+      image: cocina
     },
     {
-      title: "Oficinas Ejecutivas",
-      description: "Remodelación de espacios corporativos - 250m²",
-      gradient: "from-gray-600 to-yellow-400"
+      title: "  Remodelación Baño",
+      description: "Remodelación completa con acabados modernos",
+      image: Lavamanos
     }
   ];
 
+  // Logo como componente SVG
+  const LogoSVG = () => (
+      <div className="text-center">
+        {/* OPCIÓN 1: USA TU IMAGEN DE LOGO */}
+        <img src={Logo} alt="CH Construcciones Logo" className="w-100 h-100 object-contain mx-auto" />
+        
+        {/* OPCIÓN 2: Logo de texto original (COMENTA ESTA SECCIÓN SI USAS LA IMAGEN) */}
+        {/* 
+        <div className="text-6xl lg:text-8xl font-black text-gray-900 mb-4">
+          CH
+        </div>
+        <div className="text-lg lg:text-xl font-bold text-gray-900">
+          CONSTRUCCIONES
+        </div>
+        <div className="text-sm lg:text-base font-medium text-gray-700 mt-2">
+          Eduardo Chapeño
+        </div>
+        <div className="mt-4 flex justify-center space-x-2">
+          <div className="w-3 h-3 bg-gray-900 rounded-full"></div>
+          <div className="w-3 h-3 bg-gray-900 rounded-full"></div>
+          <div className="w-3 h-3 bg-gray-900 rounded-full"></div>
+        </div>
+        */}
+      </div>
+    
+  );
+  
+
   return (
-    <div style={{margin: 0, padding: 0, width: '100vw', minHeight: '100vh'}} className="bg-white text-gray-900 font-sans">
+    <div className="bg-white text-gray-900 font-sans overflow-x-hidden">
 
       {/* Header */}
-      <header className="bg-gray-900 text-white py-4 fixed top-0 z-50 shadow-2xl" style={{width: '100vw', left: 0, right: 0, margin: 0}}>
-        <div className="flex justify-between items-center" style={{maxWidth: 'none', width: '100%', paddingLeft: '1.5rem', paddingRight: '1.5rem', margin: 0}}>
+      <header className="bg-gray-900 text-white py-4 fixed top-0 w-full z-50 shadow-2xl">
+        <div className="container mx-auto px-6 flex justify-between items-center">
 
           <div className="flex items-center gap-3">
             <div className="text-4xl font-black bg-gradient-to-br from-yellow-400 to-orange-500 bg-clip-text text-transparent tracking-tighter">
@@ -195,20 +230,18 @@ const ChConstrucciones = () => {
       </header>
 
       {/* Hero Section */}
-      <section id="inicio" className="relative flex items-center justify-center text-center text-white bg-gray-900" style={{width: '100vw', height: '100vh', margin: 0, padding: 0}}>
-        <div className="hero-parallax absolute inset-0 bg-gradient-to-br from-gray-900/95 via-black/85 to-gray-900/95" style={{width: '100vw', height: '100vh'}}></div>
+      <section id="inicio" className="relative flex items-center justify-center text-center text-white bg-gray-900 h-screen">
+        <div className="hero-parallax absolute inset-0 bg-gradient-to-br from-gray-900/95 via-black/85 to-gray-900/95"></div>
         <div 
           className="absolute inset-0 opacity-10"
           style={{
-            width: '100vw',
-            height: '100vh',
             backgroundImage: `url("data:image/svg+xml,${encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect fill="none" stroke="#FFD700" stroke-width="0.5" opacity="0.3" x="10" y="10" width="20" height="30"/><rect fill="none" stroke="#FFA500" stroke-width="0.5" opacity="0.3" x="40" y="20" width="15" height="25"/><rect fill="none" stroke="#FFD700" stroke-width="0.5" opacity="0.3" x="70" y="15" width="18" height="28"/></svg>')}")`,
             backgroundSize: '200px 200px',
             animation: 'float 20s ease-in-out infinite'
           }}
         ></div>
         
-        <div className="relative z-10" style={{width: '100%', paddingLeft: '1.5rem', paddingRight: '1.5rem', maxWidth: 'none'}}>
+        <div className="relative z-10 container mx-auto px-6">
           <div className="animate-fadeInUp">
             <h1 className="text-5xl lg:text-7xl font-black mb-6">
               Construcciones de{' '}
@@ -230,8 +263,8 @@ const ChConstrucciones = () => {
       </section>
 
       {/* Services Section */}
-      <section id="servicios" className="py-24 bg-gray-50" style={{width: '100vw', margin: 0}}>
-        <div className="content-container">
+      <section id="servicios" className="py-24 bg-gray-50">
+        <div className="container mx-auto px-6">
           <h2 className="text-5xl font-black text-center mb-16 text-gray-900">
             Nuestros{' '}
             <span className="bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
@@ -242,16 +275,16 @@ const ChConstrucciones = () => {
             {services.map((service, index) => (
               <div
                 key={index}
-                className="bg-white p-8 rounded-2xl shadow-xl text-center hover:transform hover:-translate-y-3 transition-all duration-300 border-t-4 border-yellow-400 relative overflow-hidden group"
+                className="bg-white p-10 rounded-2xl shadow-xl text-center hover:transform hover:-translate-y-3 transition-all duration-300 border-t-4 border-yellow-400 relative overflow-hidden group min-h-[320px] flex flex-col justify-center"
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-yellow-400/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
-                <div className="text-yellow-500 mb-6 flex justify-center relative z-10">
+                <div className="text-yellow-500 mb-8 flex justify-center relative z-10">
                   {service.icon}
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4 relative z-10">
+                <h3 className="text-2xl font-bold text-gray-900 mb-6 relative z-10">
                   {service.title}
                 </h3>
-                <p className="text-gray-600 relative z-10">
+                <p className="text-gray-600 relative z-10 text-lg leading-relaxed">
                   {service.description}
                 </p>
               </div>
@@ -261,11 +294,12 @@ const ChConstrucciones = () => {
       </section>
 
       {/* About Section */}
-      <section id="nosotros" className="py-24 bg-gray-900 text-white" style={{width: '100vw', margin: 0}}>
-        <div className="content-container">
+      <section id="nosotros" className="py-24 bg-gray-900 text-white">
+        <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center max-w-7xl mx-auto">
-            <div>
-              <h2 className="text-5xl font-black mb-8">
+            {/* Texto - En móvil aparece primero */}
+            <div className="order-2 lg:order-1">
+              <h2 className="text-4xl lg:text-5xl font-black mb-8">
                 Eduardo{' '}
                 <span className="bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
                   Chapeño
@@ -275,29 +309,31 @@ const ChConstrucciones = () => {
                 Maestro constructor con más de 15 años de experiencia en el sector. Me especializo en brindar soluciones integrales de construcción, desde proyectos residenciales hasta comerciales, siempre con el compromiso de la excelencia.
               </p>
               <p className="text-lg mb-12 leading-relaxed text-gray-300">
-                Mi filosofía de trabajo se basa en la calidad, la puntualidad y la transparencia. Cada proyecto es único y merece toda mi atención y dedicación para superar las expectativas del cliente.
+                Mi filosofía de trabajo se basa en la calidad, la honradez y la transparencia. Cada proyecto es único y merece toda mi atención y dedicación para superar las expectativas del cliente.
               </p>
-              <div className="grid grid-cols-3 gap-8">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 lg:gap-8">
                 {[
-                  { number: "250+", label: "Proyectos Completados" },
+                  { number: "20+", label: "Proyectos Completados" },
                   { number: "15+", label: "Años de Experiencia" },
                   { number: "100%", label: "Clientes Satisfechos" }
                 ].map((stat, index) => (
                   <div
                     key={index}
-                    className="text-center p-6 bg-yellow-400/10 rounded-xl border border-yellow-400/20"
+                    className="text-center p-4 lg:p-6 bg-yellow-400/10 rounded-xl border border-yellow-400/20"
                   >
-                    <div className="text-4xl font-black mb-2 bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
+                    <div className="text-3xl lg:text-4xl font-black mb-2 bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
                       {stat.number}
                     </div>
-                    <div className="text-sm text-gray-300">{stat.label}</div>
+                    <div className="text-xs lg:text-sm text-gray-300">{stat.label}</div>
                   </div>
                 ))}
               </div>
             </div>
-            <div className="flex justify-center">
-              <div className="w-80 h-96 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-2xl flex items-center justify-center text-8xl font-black text-gray-900 shadow-2xl transform hover:scale-105 transition-transform duration-300">
-                CH
+
+            {/* Logo - En móvil aparece segundo, centrado y con buen tamaño */}
+            <div className="order-1 lg:order-2 flex items-center justify-center px-4 lg:px-0">
+              <div className="w-full max-w-sm lg:max-w-md">
+                <LogoSVG />
               </div>
             </div>
           </div>
@@ -305,8 +341,8 @@ const ChConstrucciones = () => {
       </section>
 
       {/* Projects Gallery */}
-      <section id="proyectos" className="py-24 bg-gray-50" style={{width: '100vw', margin: 0}}>
-        <div className="content-container">
+      <section id="proyectos" className="py-24 bg-gray-50">
+        <div className="container mx-auto px-6">
           <h2 className="text-5xl font-black text-center mb-16 text-gray-900">
             Nuestros{' '}
             <span className="bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
@@ -317,15 +353,37 @@ const ChConstrucciones = () => {
             {projects.map((project, index) => (
               <div
                 key={index}
-                className={`relative h-72 bg-gradient-to-br ${project.gradient} rounded-2xl overflow-hidden cursor-pointer transform hover:scale-105 transition-transform duration-300 shadow-xl group`}
+                className="relative h-80 rounded-2xl overflow-hidden cursor-pointer transform hover:scale-105 transition-all duration-300 shadow-xl group"
               >
-                <div className="absolute inset-0 bg-gradient-to-t from-gray-900/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
-                  <div className="p-8 text-white">
-                    <h4 className="text-xl font-bold text-yellow-400 mb-2">
-                      {project.title}
-                    </h4>
-                    <p className="text-sm">{project.description}</p>
-                  </div>
+                {/* Imagen de fondo */}
+                <div 
+                  className="absolute inset-0 bg-cover bg-center"
+                  style={{
+                    backgroundImage: `url(${project.image})`
+                  }}
+                ></div>
+                
+                {/* Overlay gradiente */}
+                <div className="absolute inset-0 bg-gradient-to-t from-gray-900/90 via-gray-900/40 to-transparent"></div>
+                
+                {/* Overlay hover */}
+                <div className="absolute inset-0 bg-gradient-to-t from-yellow-400/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                
+                {/* Contenido */}
+                <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+                  <h4 className="text-xl font-bold text-yellow-400 mb-2 group-hover:text-yellow-300 transition-colors">
+                    {project.title}
+                  </h4>
+                  <p className="text-sm text-gray-200 group-hover:text-white transition-colors">
+                    {project.description}
+                  </p>
+                </div>
+
+                {/* Indicador de hover */}
+                <div className="absolute top-4 right-4 w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-2 group-hover:translate-x-0">
+                  <svg className="w-4 h-4 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
                 </div>
               </div>
             ))}
@@ -334,8 +392,8 @@ const ChConstrucciones = () => {
       </section>
 
       {/* Contact Section */}
-      <section id="contacto" className="py-24 bg-gradient-to-br from-gray-900 to-gray-800 text-white" style={{width: '100vw', margin: 0}}>
-        <div className="content-container">
+      <section id="contacto" className="py-24 bg-gradient-to-br from-gray-900 to-gray-800 text-white">
+        <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 max-w-7xl mx-auto">
             <div>
               <h2 className="text-5xl font-black mb-8">
@@ -413,8 +471,8 @@ const ChConstrucciones = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-black text-white text-center py-12 border-t border-yellow-400/20" style={{width: '100vw', margin: 0}}>
-        <div className="content-container">
+      <footer className="bg-black text-white text-center py-12 border-t border-yellow-400/20">
+        <div className="container mx-auto px-6">
           <p className="text-gray-400">
             &copy; 2025 CH Construcciones Eduardo Chapeño. Todos los derechos reservados.<br />
             Construcciones de calidad superior en Popayán y alrededores
@@ -451,20 +509,6 @@ const ChConstrucciones = () => {
         
         .animate-fadeInUp {
           animation: fadeInUp 1s ease-out;
-        }
-
-        .content-container {
-          max-width: 1280px;
-          margin: 0 auto;
-          padding-left: 1.5rem;
-          padding-right: 1.5rem;
-        }
-        
-        @media (max-width: 768px) {
-          .content-container {
-            padding-left: 1rem;
-            padding-right: 1rem;
-          }
         }
       `}</style>
     </div>
