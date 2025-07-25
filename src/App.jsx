@@ -18,10 +18,11 @@ import {
 import CasaFamiliar from './assets/CasaFamiliar.jpg';
 import RemodelacionIntegral from './assets/baño.jpg'; 
 import Casa from './assets/Casa.jpg'; 
-import cocina from './assets/cocina.jpg';
+import cocina from './assets/cocina2.jpg';
 import house from './assets/house.jpg'; 
 import Lavamanos from './assets/Diseño.png';
 import Logo from './assets/Logo.jpg'; // Asegúrate de tener tu logo en esta ruta
+import estructura from './assets/estructura.jpg'; // Asegúrate de tener tu logo en esta ruta
 
 const ChConstrucciones = () => {
   const [formData, setFormData] = useState({
@@ -84,7 +85,7 @@ const ChConstrucciones = () => {
     },
     {
       icon: <Hammer className="w-16 h-16" />,
-      title: "Remodelaciones Integrales",
+      title: "Trabajos estructurales",
       description: "Renovamos y modernizamos tu hogar actual con diseños contemporáneos y funcionales"
     },
     {
@@ -111,28 +112,28 @@ const ChConstrucciones = () => {
 
   const projects = [
     {
-      title: "Edificio de cuatro pisos",
+      title: "Edificio de Cuatro Pisos",
       description: "Construcción completa con acabados sutiles y funcionalidades completas",
       image: CasaFamiliar
     },
     {
-      title: "Remodelación Integral",
-      description: "Renovación completa de baño moderno",
-      image: RemodelacionIntegral
+      title: "Trabajos Estructurales",
+      description: "Trabajo estructural con acabados funcionales",
+      image: estructura
     },
     {
-      title: "Casa familiar de dos pisos",
+      title: "Casa Familiar de Dos Pisos",
       description: "Construcción de vivienda familiar con acabados sutiles y funcionales",
       image: house
     },
     {
-      title: "Casa ladrillo a la vista",
+      title: "Casa Ladrillo a la Vista",
       description: "Construcción con acabados exclusivos",
       image: Casa
     },
     {
       title: "Remodelación de Cocina Moderna",
-      description: "Remodelación completa con acabados suavees y funcionales",
+      description: "Remodelación completa con acabados suaves y funcionales",
       image: cocina
     },
     {
