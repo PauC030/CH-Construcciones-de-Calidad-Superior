@@ -1,16 +1,18 @@
-##🏗️ Landing Page - Maestro de Construcción
-Este es un proyecto sencillo construido con React + Vite, enfocado en presentar la información de maestros de obra y servicios de construcción. El sitio web está diseñado para ser rápido, responsive y visualmente atractivo, con un enfoque claro en brindar confianza y profesionalismo.
+# 🏗️ Landing Page - Maestro de Construcción
 
-##📄 Descripción del Proyecto
-Esta landing page tiene como objetivo principal mostrar los servicios ofrecidos por el maestros de construcción, destacando su experiencia, obras realizadas, y medios de contacto. Es ideal para promocionar servicios de construcción de manera profesional y accesible.
+Este es un proyecto sencillo construido con **React + Vite**, enfocado en presentar la información de maestros de obra y servicios de construcción. El sitio web está diseñado para ser rápido, responsive y visualmente atractivo, con un enfoque claro en brindar confianza y profesionalismo.
 
-# React + Vite
+## 📄 Descripción del Proyecto
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Esta landing page tiene como objetivo principal **mostrar los servicios ofrecidos por maestros de construcción**, destacando su experiencia, obras realizadas y medios de contacto. Es ideal para promocionar servicios de construcción de manera profesional y accesible.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ⚙️ React + Vite
 
+Este template proporciona una configuración mínima para trabajar con React en Vite con HMR y algunas reglas de ESLint.
 
+Actualmente, hay dos plugins oficiales disponibles:
+
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) usa [Babel](https://babeljs.io/) para Fast Refresh.
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) usa [SWC](https://swc.rs/) para Fast Refresh.
