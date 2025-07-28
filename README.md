@@ -1,10 +1,17 @@
 # 🏗️ Landing Page - Maestro de Construcción
 
-Este es un proyecto sencillo construido con **React + Vite**, enfocado en presentar la información de maestros de obra y servicios de construcción. El sitio web está diseñado para ser rápido, responsive y visualmente atractivo, con un enfoque claro en brindar confianza y profesionalismo.
+Este es un proyecto sencillo construido con **React + Vite**, enfocado en presentar la información de maestro de obra y sus servicios de construcción. El sitio web está diseñado para ser rápido, responsive y visualmente atractivo, con un enfoque claro en brindar confianza y profesionalismo.
 
 ## 📄 Descripción del Proyecto
 
 Esta landing page tiene como objetivo principal **mostrar los servicios ofrecidos por maestros de construcción**, destacando su experiencia, obras realizadas y medios de contacto. Es ideal para promocionar servicios de construcción de manera profesional y accesible.
+
+## 🚀 Tecnologías Usadas
+
+- ⚛️ React.js
+- ⚡ Vite
+- 💨 Tailwind CSS
+- 🌐 HTML5 y CSS3
 
 ---
 
