@@ -23,6 +23,7 @@ import house from './assets/house.jpg';
 import Lavamanos from './assets/Diseño.png';
 import Logo from './assets/Logo.jpg'; // Asegúrate de tener tu logo en esta ruta
 import estructura from './assets/estructura.jpg'; // Asegúrate de tener tu logo en esta ruta
+import casaV from './assets/casaV.jpg'; // Asegúrate de tener tu logo en esta ruta
 
 const ChConstrucciones = () => {
   const [formData, setFormData] = useState({
@@ -140,6 +141,11 @@ const ChConstrucciones = () => {
       title: "  Remodelación Baño",
       description: "Remodelación completa con acabados modernos",
       image: Lavamanos
+    },
+    {
+      title: "Ampliaciones Casa Familiar",
+      description: "Ampliación de vivienda familiar",
+      image: casaV
     }
   ];
 
