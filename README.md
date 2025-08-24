@@ -4,7 +4,7 @@ Este es un proyecto sencillo construido con **React + Vite**, enfocado en presen
 
 ## 📄 Descripción del Proyecto
 
-Esta landing page tiene como objetivo principal **mostrar los servicios ofrecidos por maestros de construcción**, destacando su experiencia, obras realizadas y medios de contacto. Es ideal para promocionar servicios de construcción de manera profesional y accesible.
+Esta landing page tiene como objetivo principal **mostrar los servicios ofrecidos por maestros de construcción**, destacando su experiencia, obras realizadas y medios de contacto. Es ideal para promocionar servicios de construcción de manera profesional y accesible..
 
 ## 🚀 Tecnologías Usadas
 
